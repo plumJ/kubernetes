@@ -12,6 +12,7 @@ func main() {
 	// 设置多路复用处理函数
 	http.HandleFunc("/", rootHandler)
 	http.HandleFunc("/healthz", health)
+	http.HandleFunc("/test", health)
 
 	// 设置监听端口
 	err := http.ListenAndServe("0.0.0.0:80", nil)
